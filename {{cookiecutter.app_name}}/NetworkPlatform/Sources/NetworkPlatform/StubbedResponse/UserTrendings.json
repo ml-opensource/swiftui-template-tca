@@ -1,0 +1,302 @@
+[
+   {
+      "username":"jpsim",
+      "name":"JP Simard",
+      "url":"https://github.com/jpsim",
+      "sponsorUrl":"https://github.com/sponsors/jpsim",
+      "avatar":"https://avatars.githubusercontent.com/u/474794",
+      "repo":{
+         "name":"ZenTuner",
+         "description":"A minimal chromatic tuner for iOS & macOS.",
+         "url":"https://github.com/jpsim/ZenTuner"
+      }
+   },
+   {
+      "username":"nicklockwood",
+      "name":"Nick Lockwood",
+      "url":"https://github.com/nicklockwood",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/546885",
+      "repo":{
+         "name":"SwiftFormat",
+         "description":"A command-line tool and Xcode Extension for formatting Swift code",
+         "url":"https://github.com/nicklockwood/SwiftFormat"
+      }
+   },
+   {
+      "username":"gao-sun",
+      "name":"Gao Sun",
+      "url":"https://github.com/gao-sun",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/14722250",
+      "repo":{
+         "name":"eul",
+         "description":"ðŸ–¥ï¸ macOS status monitoring app written in SwiftUI.",
+         "url":"https://github.com/gao-sun/eul"
+      }
+   },
+   {
+      "username":"onevcat",
+      "name":"Wei Wang",
+      "url":"https://github.com/onevcat",
+      "sponsorUrl":"https://github.com/sponsors/onevcat",
+      "avatar":"https://avatars.githubusercontent.com/u/1019875",
+      "repo":{
+         "name":"Kingfisher",
+         "description":"A lightweight, pure-Swift library for downloading and caching images from the web.",
+         "url":"https://github.com/onevcat/Kingfisher"
+      }
+   },
+   {
+      "username":"yonaskolb",
+      "name":"Yonas Kolb",
+      "url":"https://github.com/yonaskolb",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/2393781",
+      "repo":{
+         "name":"XcodeGen",
+         "description":"A Swift command line tool for generating your Xcode project",
+         "url":"https://github.com/yonaskolb/XcodeGen"
+      }
+   },
+   {
+      "username":"kylef",
+      "name":"Kyle Fuller",
+      "url":"https://github.com/kylef",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/44164",
+      "repo":{
+         "name":"Mockingjay",
+         "description":"An elegant library for stubbing HTTP requests with ease in Swift",
+         "url":"https://github.com/kylef/Mockingjay"
+      }
+   },
+   {
+      "username":"groue",
+      "name":"Gwendal RouÃ©",
+      "url":"https://github.com/groue",
+      "sponsorUrl":"https://github.com/sponsors/groue",
+      "avatar":"https://avatars.githubusercontent.com/u/54219",
+      "repo":{
+         "name":"GRDB.swift",
+         "description":"A toolkit for SQLite databases, with a focus on application development",
+         "url":"https://github.com/groue/GRDB.swift"
+      }
+   },
+   {
+      "username":"neilalexander",
+      "name":"Neil Alexander",
+      "url":"https://github.com/neilalexander",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/310854",
+      "repo":{
+         "name":"seaglass",
+         "description":"A truly native Matrix client for macOS - written in Swift/Cocoa, with E2E encryption support",
+         "url":"https://github.com/neilalexander/seaglass"
+      }
+   },
+   {
+      "username":"devxoul",
+      "name":"Suyeol Jeon",
+      "url":"https://github.com/devxoul",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/931655",
+      "repo":{
+         "name":"SwiftyImage",
+         "description":"ðŸŽ¨ Generate image resources in Swift",
+         "url":"https://github.com/devxoul/SwiftyImage"
+      }
+   },
+   {
+      "username":"osy",
+      "name":"osy",
+      "url":"https://github.com/osy",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/50960678",
+      "repo":{
+         "name":"Jitterbug",
+         "description":"Launch JIT enabled iOS app with a second iOS device",
+         "url":"https://github.com/osy/Jitterbug"
+      }
+   },
+   {
+      "username":"AliSoftware",
+      "name":"Olivier Halligon",
+      "url":"https://github.com/AliSoftware",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/216089",
+      "repo":{
+         "name":"Reusable",
+         "description":"A Swift mixin for reusing views easily and in a type-safe way (UITableViewCells, UICollectionViewCells, custom UIViews, ViewControllers, Storyboardsâ€¦)",
+         "url":"https://github.com/AliSoftware/Reusable"
+      }
+   },
+   {
+      "username":"bizz84",
+      "name":"Andrea Bizzotto",
+      "url":"https://github.com/bizz84",
+      "sponsorUrl":"https://github.com/sponsors/bizz84",
+      "avatar":"https://avatars.githubusercontent.com/u/153167",
+      "repo":{
+         "name":"SwiftyStoreKit",
+         "description":"Lightweight In App Purchases Swift framework for iOS 8.0+, tvOS 9.0+ and macOS 10.10+ â›º",
+         "url":"https://github.com/bizz84/SwiftyStoreKit"
+      }
+   },
+   {
+      "username":"mrousavy",
+      "name":"Marc Rousavy",
+      "url":"https://github.com/mrousavy",
+      "sponsorUrl":"https://github.com/sponsors/mrousavy",
+      "avatar":"https://avatars.githubusercontent.com/u/15199031",
+      "repo":{
+         "name":"react-native-vision-camera",
+         "description":"ðŸ“¸ The Camera library that sees the vision.",
+         "url":"https://github.com/mrousavy/react-native-vision-camera"
+      }
+   },
+   {
+      "username":"AvdLee",
+      "name":"Antoine van der Lee",
+      "url":"https://github.com/AvdLee",
+      "sponsorUrl":"https://github.com/sponsors/AvdLee",
+      "avatar":"https://avatars.githubusercontent.com/u/4329185",
+      "repo":{
+         "name":"SwiftUIKitView",
+         "description":"Easily use UIKit views in your SwiftUI applications. Create Xcode Previews for UIView elements",
+         "url":"https://github.com/AvdLee/SwiftUIKitView"
+      }
+   },
+   {
+      "username":"jtbandes",
+      "name":"Jacob Bandes-Storch",
+      "url":"https://github.com/jtbandes",
+      "sponsorUrl":"https://github.com/sponsors/jtbandes",
+      "avatar":"https://avatars.githubusercontent.com/u/14237",
+      "repo":{
+         "name":"SpacePOD",
+         "description":"Space! â€“ an iOS widget displaying NASA's Astronomy Picture of the Day",
+         "url":"https://github.com/jtbandes/SpacePOD"
+      }
+   },
+   {
+      "username":"krzysztofzablocki",
+      "name":"Krzysztof ZabÅ‚ocki",
+      "url":"https://github.com/krzysztofzablocki",
+      "sponsorUrl":"https://github.com/sponsors/krzysztofzablocki",
+      "avatar":"https://avatars.githubusercontent.com/u/1468993",
+      "repo":{
+         "name":"Difference",
+         "description":"Simple way to identify what is different between 2 instances of any type. Must have for TDD.",
+         "url":"https://github.com/krzysztofzablocki/Difference"
+      }
+   },
+   {
+      "username":"gordonbrander",
+      "name":"Gordon Brander",
+      "url":"https://github.com/gordonbrander",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/58421",
+      "repo":{
+         "name":"ObservableStore",
+         "description":"A lightweight Elm-like Store for SwiftUI",
+         "url":"https://github.com/gordonbrander/ObservableStore"
+      }
+   },
+   {
+      "username":"malcommac",
+      "name":"Daniele Margutti",
+      "url":"https://github.com/malcommac",
+      "sponsorUrl":"https://github.com/sponsors/malcommac",
+      "avatar":"https://avatars.githubusercontent.com/u/235645",
+      "repo":{
+         "name":"SwiftDate",
+         "description":"ðŸ” Toolkit to parse, validate, manipulate, compare and display dates, time & timezones in Swift.",
+         "url":"https://github.com/malcommac/SwiftDate"
+      }
+   },
+   {
+      "username":"mac-cain13",
+      "name":"Mathijs Kadijk",
+      "url":"https://github.com/mac-cain13",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/618233",
+      "repo":{
+         "name":"R.swift",
+         "description":"Strong typed, autocompleted resources like images, fonts and segues in Swift projects",
+         "url":"https://github.com/mac-cain13/R.swift"
+      }
+   },
+   {
+      "username":"kean",
+      "name":"Alexander Grebenyuk",
+      "url":"https://github.com/kean",
+      "sponsorUrl":"https://github.com/sponsors/kean",
+      "avatar":"https://avatars.githubusercontent.com/u/1567433",
+      "repo":{
+         "name":"Pulse",
+         "description":"Logger and network inspector for Apple platforms",
+         "url":"https://github.com/kean/Pulse"
+      }
+   },
+   {
+      "username":"alexisakers",
+      "name":"Alexis (Aubry) Akers",
+      "url":"https://github.com/alexisakers",
+      "sponsorUrl":"https://github.com/sponsors/alexisakers",
+      "avatar":"https://avatars.githubusercontent.com/u/16192914",
+      "repo":{
+         "name":"JavaScriptKit",
+         "description":"JavaScript Toolkit for WKWebView",
+         "url":"https://github.com/alexisakers/JavaScriptKit"
+      }
+   },
+   {
+      "username":"marmelroy",
+      "name":"Roy Marmelstein",
+      "url":"https://github.com/marmelroy",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/889949",
+      "repo":{
+         "name":"PhoneNumberKit",
+         "description":"A Swift framework for parsing, formatting and validating international phone numbers. Inspired by Google's libphonenumber.",
+         "url":"https://github.com/marmelroy/PhoneNumberKit"
+      }
+   },
+   {
+      "username":"mxcl",
+      "name":"Max Howell",
+      "url":"https://github.com/mxcl",
+      "sponsorUrl":"https://github.com/sponsors/mxcl",
+      "avatar":"https://avatars.githubusercontent.com/u/58962",
+      "repo":{
+         "name":"PromiseKit",
+         "description":"Promises for Swift & ObjC.",
+         "url":"https://github.com/mxcl/PromiseKit"
+      }
+   },
+   {
+      "username":"JohnSundell",
+      "name":"John Sundell",
+      "url":"https://github.com/JohnSundell",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/2466701",
+      "repo":{
+         "name":"Publish",
+         "description":"A static site generator for Swift developers",
+         "url":"https://github.com/JohnSundell/Publish"
+      }
+   },
+   {
+      "username":"inamiy",
+      "name":"Yasuhiro Inami",
+      "url":"https://github.com/inamiy",
+      "sponsorUrl":null,
+      "avatar":"https://avatars.githubusercontent.com/u/138476",
+      "repo":{
+         "name":"SherlockForms",
+         "description":"ðŸ•µï¸â€â™‚ï¸ An elegant SwiftUI Form builder to create a searchable Settings and DebugMenu screens for iOS.",
+         "url":"https://github.com/inamiy/SherlockForms"
+      }
+   }
+]
