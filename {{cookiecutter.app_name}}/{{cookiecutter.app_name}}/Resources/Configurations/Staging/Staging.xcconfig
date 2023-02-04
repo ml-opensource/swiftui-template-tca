@@ -1,0 +1,13 @@
+//
+//  Staging.xcconfig
+//  {{cookiecutter.app_name}}
+//
+//  Created by {{ cookiecutter.creator }} on {% now 'utc', '%d/%m/%Y' %}.
+//  Copyright © {% now 'utc', '%Y' %} {{cookiecutter.company_name}}. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+XCC_BUNDLE_NAME = {{cookiecutter.app_name}}-Staging
+XCC_CONFIG_PATH = Staging/BuildConfiguration.plist

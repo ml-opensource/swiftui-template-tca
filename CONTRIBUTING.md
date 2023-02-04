@@ -20,6 +20,19 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 5. Make sure your code lints.
 6. Issue that pull request!
 
+## Copyright Template
+Make sure to use below template when a new `Swift` file is added.
+
+```
+//
+//  MainApp.swift
+//  {{cookiecutter.app_name}}
+//
+//  Created by {{ cookiecutter.creator }} on {% now 'utc', '%d/%m/%Y' %}.
+//  Copyright © {% now 'utc', '%Y' %} {{cookiecutter.company_name}}. All rights reserved.
+//
+```
+
 ## Report bugs using Github's [issues](https://github.com/monstar-lab-oss/swiftui-template-tca/issues)
 We use GitHub issues to track public bugs. Report a bug by [opening a new issue](); it's that easy!
 
