@@ -2,6 +2,7 @@
 [![IDE](https://img.shields.io/badge/Xcode-14-blue.svg)](https://developer.apple.com/xcode/)
 [![Language](https://img.shields.io/badge/swift-5.5-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/iOS-15-green.svg)](https://developer.apple.com/ios/)
+[![Build Status](https://github.com/monstar-lab-oss/swiftui-template-tca/actions/workflows/build.yml/badge.svg)](https://github.com/monstar-lab-oss/swiftui-template-tca/actions/workflows/build.yml)
 
 
 Project template to jumpstart your next iOS project with integrating best practices and tools.
