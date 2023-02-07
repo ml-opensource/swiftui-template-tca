@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build project
+    runs-on: macos-12
+    strategy:
+      matrix:
+        destination: ['platform=iOS Simulator,OS=16.1,name=iPhone 14']
+
+    steps:
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build
+        working-directory: ./{{cookiecutter.app_name}}
+        env:
+          platform: ${{ 'iOS Simulator' }}
+        run: |
+          echo "destination=${destination}"
+          xcodebuild clean test -project {{cookiecutter.app_name}}.xcodeproj -scheme Development -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+    env:
+      destination: ${{ matrix.destination }}
