@@ -10,6 +10,7 @@ import Alamofire
 import Combine
 import Foundation
 import Moya
+import Utilities
 
 protocol ProductAPIType {
     var addXAuth: Bool { get }
@@ -24,11 +25,10 @@ protocol NetworkingType {
 }
 
 extension NetworkingType {
-    static func endpointsClosure<T>(_: String? = nil) -> (T) -> Endpoint where T: TargetType, T: ProductAPIType
-    {
+    static func endpointsClosure<T>(_: String? = nil) -> (T) -> Endpoint where T: TargetType, T: ProductAPIType {
         return { target in
             let endpoint = MoyaProvider.defaultEndpointMapping(for: target)
-            print(endpoint.url)
+            Logger.info("Endpoint URL: \(endpoint.url)")
             // Sign all non-XApp, non-XAuth token requests
             return endpoint
         }
@@ -52,8 +52,7 @@ extension NetworkingType {
                 request.httpShouldHandleCookies = false
                 closure(.success(request))
             } catch {
-                // TODO: print error
-//                logError(error.localizedDescription)
+                Logger.error(error.localizedDescription)
             }
         }
     }

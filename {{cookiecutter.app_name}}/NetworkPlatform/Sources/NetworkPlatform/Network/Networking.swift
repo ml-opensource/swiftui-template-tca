@@ -11,6 +11,7 @@ import Combine
 import CombineMoya
 import Foundation
 import Moya
+import Utilities
 
 class OnlineProvider<Target> where Target: Moya.TargetType {
     private let online: AnyPublisher<Bool, Never>
@@ -52,16 +53,14 @@ class OnlineProvider<Target> where Target: Moya.TargetType {
             // TODO: investigate
             .mapError { $0 as! MoyaError }
             .handleEvents(receiveOutput: { response in
-                print(response.statusCode)
+                Logger.info("Status Code: \(response.statusCode)")
             }, receiveCompletion: { completion in
-                print(completion)
                 switch completion {
                 case .finished:
-                    break
+                    Logger.success("Request Finished")
                 case let .failure(error):
-                    print(error.localizedDescription)
                     // TODO: handle network error
-                    // self.networkPopup(error.localizedDescription)
+                    Logger.error(error.localizedDescription)
                 }
             })
             .receive(on: DispatchQueue.main)
@@ -79,7 +78,7 @@ class OnlineProvider<Target> where Target: Moya.TargetType {
                     // TODO: Update new tokens
                     break
                 case let .failure(error):
-                    print("error: \(error)")
+                    Logger.error(error.localizedDescription)
                     // TODO: delete existing token and logout from app
                 }
 

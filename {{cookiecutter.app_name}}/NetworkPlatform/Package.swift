@@ -13,6 +13,7 @@ let package = Package(
     
     dependencies: [
         .package(path: "../Domain"),
+        .package(path: "../Utilities"),
         .package(
             url: "https://github.com/Moya/Moya.git",
             from: "15.0.0"
@@ -37,6 +38,7 @@ let package = Package(
                 dependencies: [
                     "BuildConfiguration",
                     .product(name: "Domain", package: "Domain"),
+                    .product(name: "Utilities", package: "Utilities"),
                     .product(name: "Moya", package: "Moya"),
                     .product(name: "CombineMoya", package: "Moya")
                 ]
