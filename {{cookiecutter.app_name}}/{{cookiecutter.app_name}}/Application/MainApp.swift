@@ -13,7 +13,8 @@ import SwiftUI
 struct MainApp: App {
     var body: some Scene {
         WindowGroup {
-            EmptyView()
+            Text("👋🏼 🌎")
+                .font(.largeTitle)
         }
     }
 }

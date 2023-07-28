@@ -53,7 +53,6 @@
 		2F1CB989291A097F0033C297 /* BuildConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BuildConfiguration.plist; sourceTree = "<group>"; };
 		2F28C5F82942162600B7E601 /* NetworkPlatform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = NetworkPlatform; sourceTree = "<group>"; };
 		2F4989C3298E8F470007A245 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
-		2F4989C4298E8F6F0007A245 /* Commons */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Commons; sourceTree = "<group>"; };
 		2F4989C5298E8F9E0007A245 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
 		2F7B0E56273AD7AC00C68B1F /* {{cookiecutter.app_name}}.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "{{cookiecutter.app_name}}.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7B0E59273AD7AC00C68B1F /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		2F7B0E74273AD7AD00C68B1F /* __cookiecutter_app_name__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __cookiecutter_app_name__UITests.swift; sourceTree = "<group>"; };
 		2F7B0E76273AD7AD00C68B1F /* __cookiecutter_app_name__UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __cookiecutter_app_name__UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2F9DFD462990EA1800611A47 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Utilities; sourceTree = "<group>"; };
+		2FBF5D1D2A73C01B00527C7D /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
 		6782D5572912526F0015FCBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6782D558291252700015FCBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67B2B5BD29127D3A00B2E0AC /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
@@ -116,16 +116,16 @@
 		2F7B0E4D273AD7AC00C68B1F = {
 			isa = PBXGroup;
 			children = (
-				2F9DFD462990EA1800611A47 /* Utilities */,
-				2F28C5F82942162600B7E601 /* NetworkPlatform */,
+				2FBF5D1D2A73C01B00527C7D /* Common */,
 				2F4989C3298E8F470007A245 /* Domain */,
-				2F4989C4298E8F6F0007A245 /* Commons */,
 				2F4989C5298E8F9E0007A245 /* Features */,
+				2F28C5F82942162600B7E601 /* NetworkPlatform */,
+				2F9DFD462990EA1800611A47 /* Utilities */,
 				2F7B0E58273AD7AC00C68B1F /* {{cookiecutter.app_name}} */,
 				2F7B0E69273AD7AD00C68B1F /* {{cookiecutter.app_name}}Tests */,
 				2F7B0E73273AD7AD00C68B1F /* {{cookiecutter.app_name}}UITests */,
-				2F7B0E57273AD7AC00C68B1F /* Products */,
 				2F5AB7A12940BC1C008B0BAC /* Frameworks */,
+				2F7B0E57273AD7AC00C68B1F /* Products */,
 			);
 			sourceTree = "<group>";
 		};

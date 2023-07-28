@@ -22,10 +22,6 @@ let package = Package(
             url: "https://github.com/Swinject/Swinject.git",
             from: "2.8.0"
         ),
-        .package(
-            url: "https://github.com/pointfreeco/swift-composable-architecture",
-            from: "0.47.2"
-        )
     ],
     
     targets: [
