@@ -55,6 +55,17 @@ The templete used `.xcconfig` and `BuildConfiguration.plist` files to maintain d
 
 You will have to manually configure the bundle id of the main target and test target.
 
+## TCA Template Installation
+All the Xcode custom template files are located in ~/Library/Developer/Xcode/Templates/ and grouped into sections by folder name. Create a folder with name `Custom Templates` manually or by running the following command from the terminal:
+
+```
+mkdir ~/Library/Developer/Xcode/Templates/Custom Templates
+```
+
+Now drag and drop the `TCA.xctemplate` that included with the repo to the `Custom Templates` directory. Now the TCA template can be selected from File Templates
+
+![](assets/tca_template.gif)
+
 ## Contributing Code
 Please refer to [Contributing Guidelines](https://github.com/monstar-lab-oss/swiftui-template-tca/blob/main/CONTRIBUTING.md) before participating.
 
