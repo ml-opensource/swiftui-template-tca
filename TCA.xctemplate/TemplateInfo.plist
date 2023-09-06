@@ -63,6 +63,8 @@
 			<string>static</string>
 		</dict>
 	</array>
+	<key>SupportsSwiftPackage</key>
+	<true/>
 	<key>SortOrder</key>
 	<string>7</string>
 </dict>
