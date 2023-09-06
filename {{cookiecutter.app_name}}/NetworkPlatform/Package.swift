@@ -16,11 +16,7 @@ let package = Package(
         .package(path: "../Utilities"),
         .package(
             url: "https://github.com/Moya/Moya.git",
-            from: "15.0.0"
-        ),
-        .package(
-            url: "https://github.com/Swinject/Swinject.git",
-            from: "2.8.0"
+            from: "15.0.3"
         ),
     ],
     
