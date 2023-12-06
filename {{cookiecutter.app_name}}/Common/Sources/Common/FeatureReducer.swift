@@ -9,7 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 // MARK: FeatureReducer
-public protocol FeatureReducer: Reducer where State: Sendable & Hashable Action == FeatureAction<Self> {
+public protocol FeatureReducer: Reducer where State: Sendable & Hashable, Action == FeatureAction<Self> {
     associatedtype ViewAction: Sendable & Equatable = Never
     associatedtype InternalAction: Sendable & Equatable = Never
     associatedtype ChildAction: Sendable & Equatable = Never

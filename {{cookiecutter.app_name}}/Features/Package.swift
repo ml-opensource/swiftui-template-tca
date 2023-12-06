@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -8,10 +8,17 @@ let package = Package(
     platforms: [.macOS(.v12), .iOS(.v15)],
     products: [
         .library(
-            name: "Features",
-            targets: ["Features"]),
+            name: "App",
+            targets: ["App"]
+        ),
+        
+            .library(
+                name: "Counter",
+                targets: ["Counter"]
+            )
     ],
     dependencies: [
+        .package(path: "../Common"),
         .package(
             url: "https://github.com/pointfreeco/swift-composable-architecture",
             exact: "1.5.1"
@@ -19,10 +26,20 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Features",
-            dependencies: []),
-        .testTarget(
-            name: "FeaturesTests",
-            dependencies: ["Features"]),
+            name: "App",
+            dependencies: [
+                "Counter",
+                .product(name: "Common", package: "Common"),
+                .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+            ]
+        ),
+        
+            .target(
+                name: "Counter",
+                dependencies: [
+                    .product(name: "Common", package: "Common"),
+                    .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+                ]
+            )
     ]
 )
