@@ -1,8 +1,9 @@
 //
 //  AppFeature.swift
+//  Features
 //
-//
-//  Created by Md. Arman Morshed on 6/12/23.
+//  Created by {{ cookiecutter.creator }} on {% now 'utc', '%d/%m/%Y' %}.
+//  Copyright © {% now 'utc', '%Y' %} {{cookiecutter.company_name}}. All rights reserved.
 //
 
 import Common
