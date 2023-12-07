@@ -23,6 +23,11 @@ public struct Counter: FeatureReducer {
     public enum ViewAction: Equatable {
         case decrementButtonTapped
         case incrementButtonTapped
+        case closeButtonTapped
+    }
+    
+    public enum InternalAction: Equatable {
+        case close
     }
     
     public enum DelegateAction: Equatable {
@@ -38,6 +43,16 @@ public struct Counter: FeatureReducer {
         case .incrementButtonTapped:
             state.count += 1
             return .none
+            
+        case .closeButtonTapped:
+            return .send(.internal(.close))
+        }
+    }
+    
+    public func reduce(into state: inout State, internalAction: InternalAction) -> Effect<Action> {
+        switch internalAction {
+        case .close:
+            return .send(.delegate(.close))
         }
     }
 }

@@ -39,7 +39,7 @@ public struct CounterView: View {
                 }
                 
                 Button {
-                    viewstore.send(.delegate(.close))
+                    viewstore.send(.view(.closeButtonTapped))
                 } label: {
                     Text("Dismiss")
                         .foregroundStyle(.white)
