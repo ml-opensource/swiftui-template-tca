@@ -9,16 +9,16 @@ on:
 jobs:
   build:
     name: Build project
-    runs-on: macos-12
+    runs-on: macos-latest
     strategy:
       matrix:
-        destination: ['platform=iOS Simulator,OS=16.1,name=iPhone 14']
+        destination: ['platform=iOS Simulator,OS=17.0,name=iPhone 15']
 
     steps:
       - name: Setup Xcode
-        uses: maxim-lobanov/setup-xcode@v1
+        uses: maxim-lobanov/setup-xcode@v1.6.0
         with:
-          xcode-version: latest
+          xcode-version: '15.0'
       - name: Checkout
         uses: actions/checkout@v3
       - name: Build
