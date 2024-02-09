@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>Development</string>
+	<string>Production</string>
 	<key>baseURL</key>
 	<string>https://gtrend.yapie.me</string>
 	<key>testFlags</key>

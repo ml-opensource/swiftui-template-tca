@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0D066C2B76030C00442618 /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 2F0D066B2B76030C00442618 /* App */; };
+		2F0D066E2B76035F00442618 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 2F0D066D2B76035F00442618 /* ComposableArchitecture */; };
 		2F1CB98A291A097F0033C297 /* BuildConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F1CB989291A097F0033C297 /* BuildConfiguration.plist */; };
 		2F7B0E5A273AD7AC00C68B1F /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7B0E59273AD7AC00C68B1F /* MainApp.swift */; };
 		2F7B0E6B273AD7AD00C68B1F /* __cookiecutter_app_name__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7B0E6A273AD7AD00C68B1F /* __cookiecutter_app_name__Tests.swift */; };
@@ -63,6 +65,7 @@
 		2F7B0E70273AD7AD00C68B1F /* {{cookiecutter.app_name}}UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "{{cookiecutter.app_name}}UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F7B0E74273AD7AD00C68B1F /* __cookiecutter_app_name__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __cookiecutter_app_name__UITests.swift; sourceTree = "<group>"; };
 		2F7B0E76273AD7AD00C68B1F /* __cookiecutter_app_name__UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = __cookiecutter_app_name__UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2F88959D2B75F8FB0047F158 /* PersistentPlatform */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PersistentPlatform; sourceTree = "<group>"; };
 		2F9DFD462990EA1800611A47 /* Utilities */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Utilities; sourceTree = "<group>"; };
 		2FBF5D1D2A73C01B00527C7D /* Common */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Common; sourceTree = "<group>"; };
 		6782D5572912526F0015FCBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -80,8 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B203074B2B207D4E00EBA314 /* ComposableArchitecture in Frameworks */,
-				B20307482B207C8600EBA314 /* App in Frameworks */,
+				2F0D066E2B76035F00442618 /* ComposableArchitecture in Frameworks */,
+				2F0D066C2B76030C00442618 /* App in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +123,7 @@
 		2F7B0E4D273AD7AC00C68B1F = {
 			isa = PBXGroup;
 			children = (
+				2F88959D2B75F8FB0047F158 /* PersistentPlatform */,
 				2FBF5D1D2A73C01B00527C7D /* Common */,
 				2F4989C3298E8F470007A245 /* Domain */,
 				2F4989C5298E8F9E0007A245 /* Features */,
@@ -252,8 +256,8 @@
 			);
 			name = "{{cookiecutter.app_name}}";
 			packageProductDependencies = (
-				B20307472B207C8600EBA314 /* App */,
-				B203074A2B207D4E00EBA314 /* ComposableArchitecture */,
+				2F0D066B2B76030C00442618 /* App */,
+				2F0D066D2B76035F00442618 /* ComposableArchitecture */,
 			);
 			productName = "{{cookiecutter.app_name}}";
 			productReference = 2F7B0E56273AD7AC00C68B1F /* {{cookiecutter.app_name}}.app */;
@@ -1332,13 +1336,13 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B20307472B207C8600EBA314 /* App */ = {
+		2F0D066B2B76030C00442618 /* App */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = App;
 		};
-		B203074A2B207D4E00EBA314 /* ComposableArchitecture */ = {
+		2F0D066D2B76035F00442618 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B20307492B207D4E00EBA314 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			package = 6782D5B32912554D0015FCBB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */

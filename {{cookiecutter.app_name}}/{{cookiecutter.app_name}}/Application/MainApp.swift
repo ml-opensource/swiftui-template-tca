@@ -13,13 +13,14 @@ import SwiftUI
 #warning("Please rename to your app name")
 @main
 struct MainApp: App {
-    var body: some Scene {
-        let store = Store(initialState: AppFeature.State(), 
-                          reducer: { AppFeature() }
-        )
-        
-        WindowGroup {
-            AppView(store: store)
-        }
+  var body: some Scene {
+    let store = Store(
+      initialState: AppFeature.State(),
+      reducer: { AppFeature() }
+    )
+
+    WindowGroup {
+      AppView(store: store)
     }
+  }
 }
