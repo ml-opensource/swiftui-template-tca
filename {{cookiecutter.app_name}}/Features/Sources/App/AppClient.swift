@@ -30,7 +30,7 @@ extension AppClient {
 }
 
 extension DependencyValues {
-  public var productClient: AppClient {
+  public var appClient: AppClient {
     get { self[AppClient.self] }
     set { self[AppClient.self] = newValue }
   }

@@ -13,7 +13,7 @@ import Domain
 
 public struct AppFeature: FeatureReducer {
 
-  @Dependency(\.productClient) var productClient
+  @Dependency(\.appClient) var appClient
   public init() {}
 
   public struct State: Equatable, Hashable {
@@ -48,12 +48,12 @@ public struct AppFeature: FeatureReducer {
     switch viewAction {
     case .onAppear:
       return .run { send in
-        await productClient.prepare(Void())
+        await appClient.prepare(Void())
         await send(
           .internal(
             .productResponse(
               TaskResult {
-                try await productClient.product(1)
+                try await appClient.product(1)
               })))
       }
     case .showSheet:
@@ -67,7 +67,7 @@ public struct AppFeature: FeatureReducer {
     case .save:
       return .run { [product = state.product] send in
         do {
-          try await productClient.save(product!)
+          try await appClient.save(product!)
         } catch {
 
         }
