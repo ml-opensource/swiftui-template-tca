@@ -57,30 +57,6 @@ extension NetworkingType {
       }
     }
   }
-
-  //    func requestObject<Element: Codable>(_ target: T, type: Element.Type) -> AnyPublisher<Element, NetworkingError> {
-  //        return provider.request(target)
-  //            .filterSuccessfulStatusCodes()
-  //            .map(Element.self)
-  //            .mapError { NetworkingError.error($0.localizedDescription) }
-  //        // TODO: fetch from cache
-  //            .tryCatch { _ in self.coreDataManager.localRandom() }
-  //            .mapError { NetworkingError.error($0.localizedDescription) }
-  //            .eraseToAnyPublisher()
-  //    }
-
-  func requestArray<Element: Codable>(_ target: T, type _: Element.Type)
-    -> AnyPublisher<[Element], NetworkingError>
-  {
-    provider.request(target)
-      .filterSuccessfulStatusCodes()
-      .map([Element].self)
-      .mapError { NetworkingError.error($0.localizedDescription) }
-      // TODO: fetch from cache
-      //            .tryCatch { _ in self.coreDataManager.localRandom() }
-      .mapError { NetworkingError.error($0.localizedDescription) }
-      .eraseToAnyPublisher()
-  }
 }
 
 // MARK: - Provider support
