@@ -37,7 +37,7 @@ extension AppAPI: TargetType, ProductAPIType, Stubble {
   }
 
   var parameters: [String: Any]? {
-    var params: [String: Any] = [:]
+    let params: [String: Any] = [:]
     switch self {
     default: break
     }
