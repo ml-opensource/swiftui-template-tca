@@ -2,23 +2,20 @@
 //  Stubbable.swift
 //  NetworkPlatform
 //
-//  Created by {{ cookiecutter.creator }} on {% now 'utc', '%d/%m/%Y' %}.
-//  Copyright © {% now 'utc', '%Y' %} {{cookiecutter.company_name}}. All rights reserved.
+//  Created by Rokon on 24/01/2024.
+//  Copyright © 2024 MLBD. All rights reserved.
 //
 
 import Foundation
 
-protocol Stubbable {
-    
+protocol Stubble {
+
 }
 
-extension Stubbable {
-    
-    func stubbedResponse(_ filename: String) -> Data! {
-        let bundlePath = Bundle.main.path(forResource: "Stub", ofType: "bundle")
-        let bundle = Bundle(path: bundlePath!)
-        let path = bundle?.path(forResource: filename, ofType: "json")
-        return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
-    }
-    
+extension Stubble {
+  func stubbedResponse(_ filename: String) -> Data! {
+    let path = Bundle.module.path(
+      forResource: filename, ofType: "json")
+    return (try? Data(contentsOf: URL(fileURLWithPath: path!)))
+  }
 }

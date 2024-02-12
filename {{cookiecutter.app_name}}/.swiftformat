@@ -1,5 +1,0 @@
-# format options
---allman false
-
-# file options
---exclude Pods, {{cookiecutter.app_name}}/Resources/Generated/R.generated.swift, Modules/Sources/Authentication/R.generated.swift
