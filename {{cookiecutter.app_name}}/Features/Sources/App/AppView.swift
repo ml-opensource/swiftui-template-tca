@@ -13,89 +13,94 @@ import SwiftUI
 
 @MainActor
 public struct AppView: View {
-  let store: StoreOf<AppFeature>
+    let store: StoreOf<AppFeature>
 
-  public init(store: StoreOf<AppFeature>) {
-    self.store = store
-  }
-
-  public var body: some View {
-    WithViewStore(self.store, observe: { $0 }) { viewstore in
-      Text("\(viewstore.product?.title ?? "Unknown")")
-      Text("\(viewstore.product?.description ?? "Unknown")")
-
-      Button("Save") {
-        viewstore.send(.view(.save))
-      }
-
-      Form {
-        Button {
-          viewstore.send(.view(.showSheet))
-        } label: {
-          Text("Sheet")
-        }
-
-        Button {
-          viewstore.send(.view(.showFullScreenCover))
-        } label: {
-          Text("Full Screen Cover")
-        }
-      }
-      .onAppear {
-        viewstore.send(.view(.onAppear))
-      }
-      .destinations(with: store)
+    public init(store: StoreOf<AppFeature>) {
+        self.store = store
     }
-  }
+
+    public var body: some View {
+        WithPerceptionTracking {
+            VStack {
+                VStack {
+                    Text("\(store.product?.title ?? "Unknown")")
+                    Spacer()
+                        .frame(height: 20)
+                    Text("\(store.product?.description ?? "Unknown")")
+                }
+                .padding()
+
+                Form {
+                    Button("Save") {
+                        store.send(.view(.save))
+                    }
+
+                    Button {
+                        store.send(.view(.showSheet))
+                    } label: {
+                        Text("Sheet")
+                    }
+
+                    Button {
+                        store.send(.view(.showFullScreenCover))
+                    } label: {
+                        Text("Full Screen Cover")
+                    }
+                }
+            }
+            .onAppear {
+                store.send(.view(.onAppear))
+            }
+            .destinations(with: store)
+        }
+    }
 }
 
 extension StoreOf<AppFeature> {
-  fileprivate var destination: PresentationStoreOf<AppFeature.Destination> {
-    scope(state: \.$destination, action: \.destination)
-  }
+    fileprivate var bindableDestination: ComposableArchitecture.Bindable<StoreOf<AppFeature>> {
+        return ComposableArchitecture.Bindable(self)
+    }
 }
 
 @MainActor
 extension View {
-  fileprivate func destinations(with store: StoreOf<AppFeature>) -> some View {
-    let destinationStore = store.destination
-    return showSheet(with: destinationStore)
-      .showFulllScreenCover(with: destinationStore)
-  }
-
-  private func showSheet(
-    with destinationStore: PresentationStoreOf<AppFeature.Destination>
-  ) -> some View {
-    sheet(
-      store:
-        destinationStore.scope(
-          state: \.sheet,
-          action: \.sheet)
-    ) { store in
-      CounterView(store: store)
+    fileprivate func destinations(with store: StoreOf<AppFeature>) -> some View {
+        let bindableDestination = store.bindableDestination
+        return showSheet(with: bindableDestination)
+            .showFulllScreenCover(with: bindableDestination)
     }
-  }
 
-  private func showFulllScreenCover(
-    with destinationStore: PresentationStoreOf<AppFeature.Destination>
-  ) -> some View {
-    fullScreenCover(
-      store:
-        destinationStore.scope(
-          state: \.fullScreenCover,
-          action: \.fullScreenCover)
-    ) { store in
-      CounterView(store: store)
+    private func showSheet(
+        with destinationStore: ComposableArchitecture.Bindable<StoreOf<AppFeature>>
+    ) -> some View {
+        let destinationStore = destinationStore.scope(
+            state: \.destination?.sheet,
+            action: \.destination.sheet)
+
+        return sheet(item: destinationStore) { store in
+            CounterView(store: store)
+        }
     }
-  }
+
+    private func showFulllScreenCover(
+        with destinationStore: ComposableArchitecture.Bindable<StoreOf<AppFeature>>
+    ) -> some View {
+        let destinationStore = destinationStore.scope(
+            state: \.destination?.fullScreenCover,
+            action: \.destination.fullScreenCover)
+
+        return fullScreenCover(item: destinationStore) { store in
+            CounterView(store: store)
+        }
+    }
 }
 
 #Preview {
-  AppView(
-    store:
-      .init(
-        initialState: AppFeature.State(),
-        reducer: { AppFeature() }
-      )
-  )
+    AppView(
+        store:
+            .init(
+                initialState: AppFeature.State(),
+                reducer: { AppFeature() }
+            )
+    )
 }

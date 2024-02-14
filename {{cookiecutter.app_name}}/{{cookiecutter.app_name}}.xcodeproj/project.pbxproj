@@ -19,8 +19,6 @@
 		67B2B5C529127D3A00B2E0AC /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 67B2B5BD29127D3A00B2E0AC /* Staging.xcconfig */; };
 		67B2B5C729127D3A00B2E0AC /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 67B2B5C029127D3A00B2E0AC /* Development.xcconfig */; };
 		67B2B5CA29127D3A00B2E0AC /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 67B2B5C429127D3A00B2E0AC /* Production.xcconfig */; };
-		B20307482B207C8600EBA314 /* App in Frameworks */ = {isa = PBXBuildFile; productRef = B20307472B207C8600EBA314 /* App */; };
-		B203074B2B207D4E00EBA314 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = B203074A2B207D4E00EBA314 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1330,7 +1328,7 @@
 			repositoryURL = "git@github.com:pointfreeco/swift-composable-architecture.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.1;
+				minimumVersion = 1.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1342,7 +1340,6 @@
 		};
 		2F0D066D2B76035F00442618 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6782D5B32912554D0015FCBB /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
 			productName = ComposableArchitecture;
 		};
 /* End XCSwiftPackageProductDependency section */

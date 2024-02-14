@@ -12,10 +12,10 @@ import SwiftUI
 // MARK: FeatureReducer
 public protocol FeatureReducer: Reducer
 where State: Sendable & Hashable, Action == FeatureAction<Self> {
-  associatedtype ViewAction: Sendable & Equatable = Never
-  associatedtype InternalAction: Sendable & Equatable = Never
-  associatedtype ChildAction: Sendable & Equatable = Never
-  associatedtype DelegateAction: Sendable & Equatable = Never
+  associatedtype ViewAction: Sendable = Never
+  associatedtype InternalAction: Sendable = Never
+  associatedtype ChildAction: Sendable = Never
+  associatedtype DelegateAction: Sendable = Never
 
   func reduce(into state: inout State, viewAction: ViewAction) -> Effect<Action>
   func reduce(into state: inout State, internalAction: InternalAction)
@@ -93,7 +93,7 @@ public typealias PresentationStoreOf<R: Reducer> = Store<
 
 // MARK: FeatureAction
 @CasePathable
-public enum FeatureAction<Feature: FeatureReducer>: Sendable, Equatable {
+public enum FeatureAction<Feature: FeatureReducer>: Sendable {
   case destination(PresentationAction<Feature.Destination.Action>)
   case view(Feature.ViewAction)
   case `internal`(Feature.InternalAction)
@@ -103,7 +103,7 @@ public enum FeatureAction<Feature: FeatureReducer>: Sendable, Equatable {
 
 // MARK: DestinationReducer
 public protocol DestinationReducer: Reducer
-where State: Sendable & Hashable, Action: Sendable & Equatable & CasePathable {}
+where State: Sendable & Hashable, Action: Sendable & CasePathable {}
 
 // MARK: EmptyDestination
 
@@ -116,31 +116,3 @@ public enum EmptyDestination: DestinationReducer {
     Action
   > { .none }
 }
-
-//MARK: FeatureAction + Hashable
-extension FeatureAction: Hashable
-where
-  Feature.Destination.Action: Hashable,
-  Feature.ViewAction: Hashable,
-  Feature.ChildAction: Hashable,
-  Feature.InternalAction: Hashable,
-  Feature.DelegateAction: Hashable
-{
-  public func hash(into hasher: inout Hasher) {
-    switch self {
-    case let .destination(action):
-      hasher.combine(action)
-    case let .view(action):
-      hasher.combine(action)
-    case let .internal(action):
-      hasher.combine(action)
-    case let .child(action):
-      hasher.combine(action)
-    case let .delegate(action):
-      hasher.combine(action)
-    }
-  }
-}
-
-/// For scoping to an actionless childstore
-public func actionless<T>(never: Never) -> T {}
