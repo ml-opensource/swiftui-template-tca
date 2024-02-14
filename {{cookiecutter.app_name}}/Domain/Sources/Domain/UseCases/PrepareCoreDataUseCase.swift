@@ -10,9 +10,8 @@ import Foundation
 
 public final class PrepareCoreDataUseCase: UseCase {
   var prepare: () async throws -> Void
-  public init<R: Repository>(repository: R) {
-    self.prepare =
-      repository.prepare
+  public init<R: PrepareRepository>(repository: R) {
+    self.prepare = repository.prepare
   }
 
   public func execute(input: Void) async {
