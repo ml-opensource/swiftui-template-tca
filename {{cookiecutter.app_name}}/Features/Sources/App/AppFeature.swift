@@ -25,16 +25,16 @@ public struct AppFeature: FeatureReducer {
         var product: Product?
     }
 
-    public enum ViewAction: Equatable {
+    public enum ViewAction {
         case onAppear
         case showSheet
         case showFullScreenCover
         case save
     }
 
-    public enum InternalAction: Equatable {
+    public enum InternalAction {
         case dismissDestination
-        case productResponse(TaskResult<Product?>)
+        case productResponse(Result<Product?, Error>)
     }
 
     public var body: some ReducerOf<Self> {
@@ -54,7 +54,7 @@ public struct AppFeature: FeatureReducer {
                 await send(
                     .internal(
                         .productResponse(
-                            TaskResult {
+                            Result {
                                 try await appClient.product(1)
                             })))
             }
@@ -120,7 +120,7 @@ public struct AppFeature: FeatureReducer {
         }
 
         @CasePathable
-        public enum Action: Equatable {
+        public enum Action {
             case sheet(Counter.Action)
             case fullScreenCover(Counter.Action)
         }

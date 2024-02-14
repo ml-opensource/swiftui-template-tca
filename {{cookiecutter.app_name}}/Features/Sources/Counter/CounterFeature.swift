@@ -21,17 +21,17 @@ public struct Counter: FeatureReducer {
         var count = 0
     }
 
-    public enum ViewAction: Equatable {
+    public enum ViewAction {
         case decrementButtonTapped
         case incrementButtonTapped
         case closeButtonTapped
     }
 
-    public enum InternalAction: Equatable {
+    public enum InternalAction {
         case close
     }
 
-    public enum DelegateAction: Equatable {
+    public enum DelegateAction {
         case close
     }
 
