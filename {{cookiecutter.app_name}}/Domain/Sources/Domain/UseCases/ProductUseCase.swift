@@ -12,10 +12,9 @@ public final class ProductUseCase: UseCase {
 
   var getProduct: (_ input: Int) async throws -> Product?
 
-  public init<R: Repository>(repository: R)
+  public init<R: RemoteProductRepository>(repository: R)
   where R.ReadInput == Input, R.ReadOutput == Output {
-    self.getProduct =
-      repository.read(input:)
+    self.getProduct = repository.read(input:)
   }
 
   @Sendable public func execute(input: Int) async throws -> Product? {

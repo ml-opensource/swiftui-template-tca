@@ -8,20 +8,12 @@
 
 import Domain
 
-public struct PersistentRepository: Repository {
+public struct PersistentProductRepository: Domain.PersistentProductRepository {
 
   private let persistenceController: PersistenceController
 
   private init(persistenceController: PersistenceController) {
     self.persistenceController = persistenceController
-  }
-
-  public func prepare() async {
-    do {
-      try await persistenceController.prepare()
-    } catch {
-      fatalError(error.localizedDescription)
-    }
   }
 
   public func create(input: Domain.Product) async throws {
@@ -32,6 +24,7 @@ public struct PersistentRepository: Repository {
       $0?.title = input.title
       $0?.price = input.price
       $0?.image = input.image
+      //FIXME: may be rating is a reserved keyword.
       //            $0?.rating = product.rating.toManagedObject(in: persistenceController.container.newBackgroundContext())
       $0?.category = input.category
       $0?.productDescription = input.description
@@ -42,18 +35,11 @@ public struct PersistentRepository: Repository {
     await persistenceController.fetchDomainObject(entityType: Product.self)
   }
 
-  public func update(input: Int) async throws -> Product? {
-    fatalError("Unimplemented")
-  }
-
-  public func delete(input: Int) async throws -> Product? {
-    fatalError("Unimplemented")
-  }
 }
 
-extension PersistentRepository {
-  public static var live = PersistentRepository(
+extension PersistentProductRepository {
+  public static var live = PersistentProductRepository(
     persistenceController: PersistenceController.shared)
-  public static var stubbed = PersistentRepository(
+  public static var stubbed = PersistentProductRepository(
     persistenceController: PersistenceController.shared)
 }

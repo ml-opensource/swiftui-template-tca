@@ -8,7 +8,7 @@
 
 import Domain
 
-public struct NetworkRepository: Repository {
+public struct RemoteProductRepository: Domain.RemoteProductRepository {
 
   private let network: AppNetworking
 
@@ -16,11 +16,7 @@ public struct NetworkRepository: Repository {
     self.network = network
   }
 
-  public func prepare() {
-    fatalError("Unimplemented")
-  }
-
-  public func create(input: Int) async throws -> Product? {
+  public func create(input: Product) async throws {
     fatalError("Unimplemented")
   }
 
@@ -29,19 +25,11 @@ public struct NetworkRepository: Repository {
       .product(id: input),
       type: Product.self)
   }
-
-  public func update(input: Int) async throws -> Product? {
-    fatalError("Unimplemented")
-  }
-
-  public func delete(input: Int) async throws -> Product? {
-    fatalError("Unimplemented")
-  }
 }
 
-extension NetworkRepository {
-  public static var live = NetworkRepository(
+extension RemoteProductRepository {
+  public static var live = RemoteProductRepository(
     network: AppNetworking.defaultNetworking())
-  public static var stubbed = NetworkRepository(
+  public static var stubbed = RemoteProductRepository(
     network: AppNetworking.stubbingNetworking())
 }

@@ -38,15 +38,18 @@ extension DependencyValues {
 
 extension AppClient: DependencyKey {
   public static var liveValue = AppClient(
-    PrepareCoreDataUseCase(repository: PersistentRepository.live),
-    productUseCase: ProductUseCase(repository: NetworkRepository.live),
-    saveProduct: SaveProductUseCase(repository: PersistentRepository.live))
+    PrepareCoreDataUseCase(repository: PreparePersistentRepository.live),
+    productUseCase: ProductUseCase(repository: RemoteProductRepository.live),
+    saveProduct: SaveProductUseCase(
+      repository: PersistentProductRepository.live))
   public static var testValue = AppClient(
-    PrepareCoreDataUseCase(repository: PersistentRepository.live),
-    productUseCase: ProductUseCase(repository: NetworkRepository.stubbed),
-    saveProduct: SaveProductUseCase(repository: PersistentRepository.live))
+    PrepareCoreDataUseCase(repository: PreparePersistentRepository.live),
+    productUseCase: ProductUseCase(repository: RemoteProductRepository.stubbed),
+    saveProduct: SaveProductUseCase(
+      repository: PersistentProductRepository.live))
   public static var previewValue = AppClient(
-    PrepareCoreDataUseCase(repository: PersistentRepository.live),
-    productUseCase: ProductUseCase(repository: PersistentRepository.stubbed),
-    saveProduct: SaveProductUseCase(repository: PersistentRepository.live))
+    PrepareCoreDataUseCase(repository: PreparePersistentRepository.live),
+    productUseCase: ProductUseCase(repository: RemoteProductRepository.stubbed),
+    saveProduct: SaveProductUseCase(
+      repository: PersistentProductRepository.live))
 }

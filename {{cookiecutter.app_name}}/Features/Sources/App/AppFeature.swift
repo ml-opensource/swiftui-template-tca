@@ -14,6 +14,7 @@ import Domain
 public struct AppFeature: FeatureReducer {
 
   @Dependency(\.appClient) var appClient
+    
   public init() {}
 
   public struct State: Equatable, Hashable {
