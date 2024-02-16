@@ -116,3 +116,35 @@ public enum EmptyDestination: DestinationReducer {
     Action
   > { .none }
 }
+
+extension FeatureReducer {
+
+  public func delayedMediumEffect(internal internalAction: InternalAction)
+    -> Effect<Action>
+  {
+    self.delayedMediumEffect(for: .internal(internalAction))
+  }
+
+  public func delayedMediumEffect(
+    for action: Action
+  ) -> Effect<Action> {
+    delayedEffect(delay: .seconds(0.6), for: action)
+  }
+
+  public func delayedShortEffect(
+    for action: Action
+  ) -> Effect<Action> {
+    delayedEffect(delay: .seconds(0.3), for: action)
+  }
+
+  private func delayedEffect(
+    delay: Duration,
+    for action: Action
+  ) -> Effect<Action> {
+    @Dependency(\.continuousClock) var clock
+    return .run { send in
+      try await clock.sleep(for: delay)
+      await send(action)
+    }
+  }
+}

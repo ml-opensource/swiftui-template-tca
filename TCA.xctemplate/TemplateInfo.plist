@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
 	<key>DefaultCompletionName</key>
 	<string>File</string>
 	<key>Summary</key>
@@ -63,8 +65,6 @@
 			<string>static</string>
 		</dict>
 	</array>
-	<key>SupportsSwiftPackage</key>
-	<true/>
 	<key>SortOrder</key>
 	<string>7</string>
 </dict>
