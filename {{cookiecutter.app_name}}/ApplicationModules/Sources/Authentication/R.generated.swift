@@ -10,7 +10,7 @@ let R = _R(bundle: Bundle.module)
 
 struct _R {
   let bundle: Foundation.Bundle
-  var color:color { .init(bundle: bundle) }
+  var color: color { .init(bundle: bundle) }
   var image: image { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
@@ -23,19 +23,24 @@ struct _R {
 
   }
 
-
   /// This `_R.color` struct is generated, and contains static references to 3 colors.
   struct color {
     let bundle: Foundation.Bundle
 
     /// Color `BgColor`.
-    var bgColor: ColorResource { .init(name: "BgColor", path: [], bundle: bundle) }
+    var bgColor: ColorResource {
+      .init(name: "BgColor", path: [], bundle: bundle)
+    }
 
     /// Color `PrimaryColor`.
-    var primaryColor: ColorResource { .init(name: "PrimaryColor", path: [], bundle: bundle) }
+    var primaryColor: ColorResource {
+      .init(name: "PrimaryColor", path: [], bundle: bundle)
+    }
 
     /// Color `TitleTextColor`.
-    var titleTextColor: ColorResource { .init(name: "TitleTextColor", path: [], bundle: bundle) }
+    var titleTextColor: ColorResource {
+      .init(name: "TitleTextColor", path: [], bundle: bundle)
+    }
   }
 
   /// This `_R.image` struct is generated, and contains static references to 4 images.
@@ -43,15 +48,31 @@ struct _R {
     let bundle: Foundation.Bundle
 
     /// Image `apple`.
-    var apple: ImageResource { .init(name: "apple", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+    var apple: ImageResource {
+      .init(
+        name: "apple", path: [], bundle: bundle, locale: nil,
+        onDemandResourceTags: nil)
+    }
 
     /// Image `fork_icon`.
-    var fork_icon: ImageResource { .init(name: "fork_icon", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+    var fork_icon: ImageResource {
+      .init(
+        name: "fork_icon", path: [], bundle: bundle, locale: nil,
+        onDemandResourceTags: nil)
+    }
 
     /// Image `google`.
-    var google: ImageResource { .init(name: "google", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+    var google: ImageResource {
+      .init(
+        name: "google", path: [], bundle: bundle, locale: nil,
+        onDemandResourceTags: nil)
+    }
 
     /// Image `onboard`.
-    var onboard: ImageResource { .init(name: "onboard", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+    var onboard: ImageResource {
+      .init(
+        name: "onboard", path: [], bundle: bundle, locale: nil,
+        onDemandResourceTags: nil)
+    }
   }
 }

@@ -1,7 +1,7 @@
 ## iOS Project Template for SwiftUI
-[![IDE](https://img.shields.io/badge/Xcode-14-blue.svg)](https://developer.apple.com/xcode/)
-[![Language](https://img.shields.io/badge/swift-5.5-orange.svg)](https://swift.org)
-[![Platform](https://img.shields.io/badge/iOS-15-green.svg)](https://developer.apple.com/ios/)
+[![IDE](https://img.shields.io/badge/Xcode-15-blue.svg)](https://developer.apple.com/xcode/)
+[![Language](https://img.shields.io/badge/swift-5.9-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/badge/iOS-16-green.svg)](https://developer.apple.com/ios/)
 [![Build Status](https://github.com/monstar-lab-oss/swiftui-template-tca/actions/workflows/build.yml/badge.svg)](https://github.com/monstar-lab-oss/swiftui-template-tca/actions/workflows/build.yml)
 
 
@@ -18,14 +18,11 @@ This template will save those hours and help to follow standard project architec
 * [R.swift](https://github.com/mac-cain13/R.swift) Get strong typed, autocompleted resources like images, fonts and segues in Swift projects
 * [Standard gitignore](https://github.com/github/gitignore/blob/master/Swift.gitignore)
 * [Moya](https://github.com/Moya/Moya) for netwoking layer
-* [Swiftlint](https://github.com/realm/SwiftLint) [SwiftLint SPM Plugin showing build error]
-* [Swinject](https://github.com/Swinject/Swinject) [Swinject SPM Plugin showing build error]
-* Development/Staging/Production app flavours
+* [Swift-Format](https://github.com/apple/swift-format) [For doing code formatting transformations]
+* Development, Staging and Production app flavours
 * Separate build configuration for each flavour
 
 ### Todo
-* Database Platform
-* Persistency Platform
 * Base classes for handling deeplink, notifications and multiple scheme
 
 ### Supporting Tools
@@ -72,8 +69,8 @@ Please refer to [Contributing Guidelines](https://github.com/monstar-lab-oss/swi
 
 ## Acknowledgments
 
-* [iOS project best practices and tools](https://medium.com/@piotr.gorzelany/ios-project-best-practices-and-tools-c46135b8116d)
-* [Development/Staging/Production Configs in Xcode](https://medium.com/better-programming/how-to-create-development-staging-and-production-configs-in-xcode-ec58b2cc1df4)
+* [iOS Project Best Practices and Tools](https://medium.com/@piotr.gorzelany/ios-project-best-practices-and-tools-c46135b8116d)
+* [Development, Staging and Production Configs in Xcode](https://medium.com/better-programming/how-to-create-development-staging-and-production-configs-in-xcode-ec58b2cc1df4)
 * [iOS Build Management using Custom Build Scheme](https://www.talentica.com/blogs/ios-build-management-using-custom-build-scheme/)
 
 ## 👥 Credits
