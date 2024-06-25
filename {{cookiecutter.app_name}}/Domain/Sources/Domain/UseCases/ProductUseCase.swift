@@ -8,6 +8,8 @@
 
 import Foundation
 
+public typealias ProductUseCaseType = UseCase<Int, Product?>
+
 public final class ProductUseCase: UseCase {
 
   var getProduct: (_ input: Int) async throws -> Product?
@@ -17,7 +19,7 @@ public final class ProductUseCase: UseCase {
     self.getProduct = repository.read(input:)
   }
 
-  @Sendable public func execute(input: Int) async throws -> Product? {
+  public func callAsFunction(input: Int) async throws -> Product? {
     return try await getProduct(input)
   }
 }

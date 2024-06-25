@@ -50,12 +50,12 @@ public struct AppFeature: FeatureReducer {
     switch viewAction {
     case .onAppear:
       return .run { send in
-        await appClient.prepare(Void())
+        try? await appClient.prepareCoreData()
         await send(
           .internal(
             .productResponse(
               Result {
-                try await appClient.product(1)
+                try await appClient.getProduct(input: 2)
               })))
       }
     case .showSheet:
@@ -69,7 +69,7 @@ public struct AppFeature: FeatureReducer {
     case .save:
       return .run { [product = state.product] send in
         do {
-          try await appClient.save(product!)
+          try await appClient.saveProduct(input: product!)
         } catch {
 
         }

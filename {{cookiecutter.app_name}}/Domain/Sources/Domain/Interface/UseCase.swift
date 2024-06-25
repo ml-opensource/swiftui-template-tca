@@ -8,9 +8,15 @@
 
 import Foundation
 
-public protocol UseCase {
+public protocol UseCase<Input, Output> {
   associatedtype Input
   associatedtype Output
 
-  func execute(input: Input) async throws -> Output
+  func callAsFunction(input: Input) async throws -> Output
+}
+
+extension UseCase where Input == Void {
+  public func callAsFunction() async throws -> Output {
+    try await callAsFunction(input: ())
+  }
 }

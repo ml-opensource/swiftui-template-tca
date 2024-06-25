@@ -12,25 +12,24 @@ import Foundation
 import NetworkPlatform
 import PersistentPlatform
 
-public struct AppClient {
-  public var prepare: (()) async -> Void
-  public var save: @Sendable (_ request: Domain.Product) async throws -> Void
-  public var product: @Sendable (_ request: Int) async throws -> Domain.Product?
-}
+struct AppClient {
+  var getProduct: any ProductUseCaseType
+  var saveProduct: any SaveProductUseCaseType
+  var prepareCoreData: any PrepareCoreDataUseCaseType
 
-extension AppClient {
-  private init(
-    _ prepare: PrepareCoreDataUseCase, productUseCase: ProductUseCase,
-    saveProduct: SaveProductUseCase
+  init(
+    _ prepare: PrepareCoreDataUseCase,
+    getProductUseCase: ProductUseCase,
+    saveProductUseCase: SaveProductUseCase
   ) {
-    self.prepare = prepare.execute(input:)
-    self.save = saveProduct.execute(input:)
-    self.product = productUseCase.execute(input:)
+    self.prepareCoreData = prepare
+    self.getProduct = getProductUseCase
+    self.saveProduct = saveProductUseCase
   }
 }
 
 extension DependencyValues {
-  public var appClient: AppClient {
+  var appClient: AppClient {
     get { self[AppClient.self] }
     set { self[AppClient.self] = newValue }
   }
@@ -39,17 +38,17 @@ extension DependencyValues {
 extension AppClient: DependencyKey {
   public static var liveValue = AppClient(
     PrepareCoreDataUseCase(repository: PreparePersistentRepository.live),
-    productUseCase: ProductUseCase(repository: RemoteProductRepository.live),
-    saveProduct: SaveProductUseCase(
+    getProductUseCase: ProductUseCase(repository: RemoteProductRepository.live),
+    saveProductUseCase: SaveProductUseCase(
       repository: PersistentProductRepository.live))
   public static var testValue = AppClient(
     PrepareCoreDataUseCase(repository: PreparePersistentRepository.live),
-    productUseCase: ProductUseCase(repository: RemoteProductRepository.stubbed),
-    saveProduct: SaveProductUseCase(
+    getProductUseCase: ProductUseCase(repository: RemoteProductRepository.stubbed),
+    saveProductUseCase: SaveProductUseCase(
       repository: PersistentProductRepository.live))
   public static var previewValue = AppClient(
     PrepareCoreDataUseCase(repository: PreparePersistentRepository.live),
-    productUseCase: ProductUseCase(repository: RemoteProductRepository.stubbed),
-    saveProduct: SaveProductUseCase(
+    getProductUseCase: ProductUseCase(repository: RemoteProductRepository.stubbed),
+    saveProductUseCase: SaveProductUseCase(
       repository: PersistentProductRepository.live))
 }
