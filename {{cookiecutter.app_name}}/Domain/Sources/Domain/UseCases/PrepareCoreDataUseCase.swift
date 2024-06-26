@@ -8,13 +8,16 @@
 
 import Foundation
 
-public final class PrepareCoreDataUseCase: UseCase {
+public typealias PrepareCoreDataUseCaseType = UseCase<Void, Void>
+
+public class PrepareCoreDataUseCase: UseCase {
   var prepare: () async throws -> Void
+
   public init<R: PrepareRepository>(repository: R) {
     self.prepare = repository.prepare
   }
 
-  public func execute(input: Void) async {
+  public func callAsFunction(input: Void) async {
     try? await prepare()
   }
 }

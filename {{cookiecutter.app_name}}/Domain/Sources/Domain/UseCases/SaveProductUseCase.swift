@@ -8,6 +8,8 @@
 
 import Foundation
 
+public typealias SaveProductUseCaseType = UseCase<Product, Void>
+
 public final class SaveProductUseCase: UseCase {
   var saveProduct: (_ input: Product) async throws -> Void
 
@@ -16,7 +18,7 @@ public final class SaveProductUseCase: UseCase {
     self.saveProduct = repository.create(input:)
   }
 
-  @Sendable public func execute(input: Product) async throws {
+  public func callAsFunction(input: Product) async throws {
     return try await saveProduct(input)
   }
 }
